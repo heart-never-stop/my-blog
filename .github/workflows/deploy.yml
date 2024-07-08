@@ -45,12 +45,12 @@ jobs:
         run: npm ci # 或 pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: |
-          npm run build # 启动项目
-          touch .nojekyll  
+          npm run docs:build # 启动项目
+          touch .nojekyll        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
 
   # 部署工作
   deploy:
