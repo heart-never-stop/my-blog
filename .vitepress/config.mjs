@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-	base: "/",
+	base: "",
 	title: "心脏永不暂停",
 	description: "A VitePress Site11",
 	themeConfig: {
