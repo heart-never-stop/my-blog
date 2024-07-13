@@ -24,6 +24,9 @@ features:
   - title: Java
     details: Java版本管理及配置
     link: /env/java
+  - title: 节点配置
+    details: 免费节点部署
+    link: /free-node
 ---
 
 
