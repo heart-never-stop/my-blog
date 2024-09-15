@@ -126,17 +126,20 @@ Mac 系统安装nvm
 1. cd ~  // 进入根目录
 2. git clone https://github.com/nvm-sh/nvm.git // 克隆nvm源码
 3. cd nvm // 进入nvm目录
-4. 执行 ./install.sh
+4. 命令行输入 ./install.sh
 5. nvm -v // 查看nvm版本
-6. 切换源，安装nvm完成后，一般会在根目录下的.zprofile 生成下面的代码，
+6. 切换源，安装nvm完成后，一般会在根目录下的~/.zshrc 或 ~/.bashrc 或 .zprofile 生成下面的代码，
    不用关心，自动会生成
    export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    然后在这几行代码下添加两条配置
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
-  最后执行 source ~/.zprofile 或者重启终端
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
+export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs(这个是fork的Node.js(即io.js)可不加)
+  命令行输入 “ls -a” 查看下有没有.zshrc 或 .bashrc 或 .zprofile
+  有其中一个就行，没有自己手动创建一个（重新执行下3和4）
+  最后执行 source ~/.zprofile 或 source ~/.bashrc 或 source ~/.zshrc
+  上面不想执行，那就重启终端就行
 7. nvm install node版本号（nvm install 20 或者 nvm i 20）
    执行上面的命令会下载node 20 的稳定版本
 8. 然后执行 node -v // 查看node版本
